@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <section class="onePlayer">
+            <div class="scoring">
+                <div class="redtitle">
+                    <h2 style="color:antiquewhite; text-decoration: underline;">For Practicing Solo:</h2>
+                </div>
+                <div class="onePoint">
+                    <button class="ptbutton" onclick="noScorep1()">0</button>
+                    <button class="ptbutton" onclick="add1p1()">1</button>
+                    <button class="ptbutton" onclick="add2p1()">2</button>
+                    <button class="ptbutton" onclick="ringer3p1()">3</button>
+                    <button class="ptbutton" onclick="ringer4p1()">4</button>
+                    <button class="ptbutton" onclick="ringer6p1()">6</button>
+                    <br>
+                    <hr>
+                    <button class="minusptbutton" onclick="undoNoScorep1()">-0</button>
+                    <button class="minusptbutton" onclick="undoAdd1p1()">-1</button>
+                    <button class="minusptbutton" onclick="undoAdd2p1()">-2 </button>
+                    <button class="minusptbutton" onclick="undoRinger3p1()">-3</button>
+                    <button class="minusptbutton" onclick="undoRinger4p1()">-4</button>
+                    <button class="minusptbutton" onclick="undoRinger6p1()">-6</button>
+                </div>
+                <div class="score">
+                    <h4 style="color: antiquewhite">Total Score: <span id="p1score"></span></h4>
+                    <h4 style="color: antiquewhite">Shoes: <span id="p1totalShoes"></span></h4>
+                    <h4 style="color: antiquewhite">Ringers: <span id="p1totalRingers"></span></h4>
+                    <h4 style="color: antiquewhite">Doubles: <span id="p1totalDoubles"></span></h4>
+                    <h4 style="color: antiquewhite">Ringer Pct: <span id="p1ringerpct"></span></h4>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="notes">
+                <h5>Notes:</h5>
+                <ul>
+                    <li>For undoing a score, use the <span style="background-color: yellow;">- number</span> buttons. This will revert all five rows back to the previous number.</li>
+                </ul>
+            </div>
+        </aside>
+        <hr>
+        <aside>
+            <div class="notes">
+                <h5>Notes:</h5>
+                <ul>
+                    <li>Two-player game should work now (05/14/2022). </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="twoPlayers">
+            <div class="reset">
+                <button onclick="twoReset()">Reset</button>
+            </div>
+            <div class="topTwoPlayer">
+                <div class="scoring">
+                    <div class="blueTitle">
+                        <h2 style="color:antiquewhite; text-decoration: underline;">Two-Person Game:</h2>
+                        <input type="text" id="name1input"/>
+                        <button type="submit" onclick="name1enter()">Add Name</button>
+                    </div>
+                    <div class="twoPoint">
+                        <button class="ptbutton" onclick="noScorep2()">0</button>
+                        <button class="ptbutton" onclick="add1p2()">1</button>
+                        <button class="ptbutton" onclick="add2p2()">2</button>
+                        <button class="ptbutton" onclick="ringer3p2()">Ringer 3</button>
+                        <button class="ptbutton" onclick="ringer4p2()">Ringer 4</button>
+                        <button class="ptbutton" onclick="a2dead1p2()">2 Dead 1</button>
+                        <button class="ptbutton" onclick="a3ringer3p2()">3 Ringer 3</button>
+                        <button class="ptbutton" onclick="ringer6p2()">2 Ringer 6</button>
+                        <button class="ptbutton" onclick="a4deadp2()">4 Dead</button>
+                        <br>
+                        <hr>
+                        <button class="minusptbutton" onclick="undonoScorep2()">Undo 0</button>
+                        <button class="minusptbutton" onclick="undoadd1p2()">Undo 1</button>
+                        <button class="minusptbutton" onclick="undoadd2p2()">Undo 2</button>
+                        <button class="minusptbutton" onclick="undoringer3p2()">Undo Ringer 3</button>
+                        <button class="minusptbutton" onclick="undoringer4p2()">Undo Ringer 4</button>
+                        <button class="minusptbutton" onclick="undoa2dead1p2()">Undo 2 Dead 1</button>
+                        <button class="minusptbutton" onclick="undoa3ringer3p2()">Undo 3 Ringer 3</button>
+                        <button class="minusptbutton" onclick="undoringer6p2()">Undo 2 Ringer 6</button>
+                        <button class="minusptbutton" onclick="undoa4deadp2()">Undo 4 Dead</button>
+                    </div>
+                    <div class="player2">
+                        <h2 id="name1"></h2>
+                    </div>
+                    <div class="score">
+                        <h4 style="color: antiquewhite">Total Score: <span id="p2score" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Shoes: <span id="p2totalShoes" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Ringers: <span id="p2totalRingers" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Doubles: <span id="p2totalDoubles" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Ringer Pct: <span id="p2ringerpct" class="biggernum"></span></h4>
+                    </div>
+                    <hr>
+                    <hr>
+                </div>
+            </div>
+            <div class="bottomTwoPlayer">
+                <div class="scoring">
+                    <div class="twoPoint">
+                        <button class="ptbutton" onclick="noScorep3()">0</button>
+                        <button class="ptbutton" onclick="add1p3()">1</button>
+                        <button class="ptbutton" onclick="add2p3()">2</button>
+                        <button class="ptbutton" onclick="ringer3p3()">Ringer 3</button>
+                        <button class="ptbutton" onclick="ringer4p3()">Ringer 4</button>
+                        <button class="ptbutton" onclick="a2dead1p3()">2 Dead 1</button>
+                        <button class="ptbutton" onclick="a3ringer3p3()">3 Ringer 3</button>
+                        <button class="ptbutton" onclick="ringer6p3()">2 Ringer 6</button>
+                        <button class="ptbutton" onclick="a4deadp3()">4 Dead</button>
+                        <br>
+                        <hr>
+                        <button class="minusptbutton" onclick="undonoScorep3()">Undo 0</button>
+                        <button class="minusptbutton" onclick="undoadd1p3()">Undo 1</button>
+                        <button class="minusptbutton" onclick="undoadd2p3()">Undo 2</button>
+                        <button class="minusptbutton" onclick="undoringer3p3()">Undo Ringer 3</button>
+                        <button class="minusptbutton" onclick="undoringer4p3()">Undo Ringer 4</button>
+                        <button class="minusptbutton" onclick="undoa2dead1p3()">Undo 2 Dead 1</button>
+                        <button class="minusptbutton" onclick="undoa3ringer3p3()">Undo 3 Ringer 3</button>
+                        <button class="minusptbutton" onclick="undoringer6p3()">Undo 2 Ringer 6</button>
+                        <button class="minusptbutton" onclick="undoa4deadp3()">Undo 4 Dead</button>
+                    </div>
+                    <div class="score">
+                        <h4 style="color: antiquewhite">Total Score: <span id="p3score" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Shoes: <span id="p3totalShoes" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Ringers: <span id="p3totalRingers" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Doubles: <span id="p3totalDoubles" class="biggernum"></span></h4>
+                        <h4 style="color: antiquewhite">Ringer Pct: <span id="p3ringerpct" class="biggernum"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

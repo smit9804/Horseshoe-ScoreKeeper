@@ -1,0 +1,66 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.onePlayer{
+    background-image: linear-gradient(red, maroon);
+    width: fit-content;
+    margin: 1rem;
+    padding: .5rem;
+    display: grid;
+    border-radius: 10px;
+}
+
+.twoPlayers{
+    background-image: linear-gradient(blue, navy);
+    width: fit-content;
+    margin: 1rem;
+    padding: .5rem;
+    display: grid;
+    border-radius: 10px;
+}
+
+.ptbutton{
+    background-color: blanchedalmond;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    width: 5rem;
+    padding: .25rem;
+    border-radius: 10px;
+}
+
+.minusptbutton{
+    background-color: blanchedalmond;
+    color: red;
+    font-weight: 600;
+    font-size: 20px;
+    width: 5rem;
+    padding: .25rem;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.resetbtn {
+    background-color: crimson;
+    color: lightgoldenrodyellow;
+    width: 3rem;
+    padding: .25rem;
+
+}
+
+.spacebutton{
+    background-color: transparent;
+    border: none;
+    color: none;
+    width: 4rem;
+    padding: .25rem;
+}
+
+.score > h4 > span {
+    margin-left: 2px;
+}
+
+.biggernum{
+    font-size: x-large;
+}
